@@ -137,8 +137,9 @@ const Index = () => {
         {/* Footer */}
         <footer className="mt-auto border-t border-border pt-5">
           <p className="text-center text-[11px] leading-relaxed text-muted-foreground">
-            This page contains promotional content and may redirect to third-party offers.
-            Eligibility and rewards are determined by the third-party provider.
+            © {new Date().getFullYear()} OfferEligibilityCheck. This page contains promotional content
+            and may redirect to third-party offers. Eligibility and rewards are determined by the
+            third-party provider.
           </p>
         </footer>
       </div>
