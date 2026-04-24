@@ -69,16 +69,33 @@ const Index = () => {
         {/* Trust bullets */}
         <section className="mb-6 space-y-3">
           {[
-            { icon: CheckCircle2, text: "No credit card required" },
-            { icon: ShieldCheck, text: "Free eligibility check" },
-            { icon: Clock, text: "Takes less than 30 seconds" },
-          ].map(({ icon: Icon, text }) => (
+            {
+              icon: CheckCircle2,
+              title: "100% Free — No Card Needed",
+              sub: "Zero payment info. Nothing to enter, nothing to cancel.",
+            },
+            {
+              icon: ShieldCheck,
+              title: "Instant Eligibility Check",
+              sub: "See if you qualify for this US-only reward — completely free.",
+            },
+            {
+              icon: Clock,
+              title: "Done in Under 30 Seconds",
+              sub: "3 quick questions. No signup, no waiting, no hassle.",
+            },
+          ].map(({ icon: Icon, title, sub }) => (
             <div
-              key={text}
-              className="flex items-center gap-3 rounded-xl border border-border bg-card/50 px-4 py-3 backdrop-blur"
+              key={title}
+              className="flex items-start gap-3 rounded-xl border border-border bg-card/50 px-4 py-3 backdrop-blur"
             >
-              <Icon className="h-5 w-5 shrink-0 text-primary" strokeWidth={2.5} />
-              <span className="text-sm font-medium">{text}</span>
+              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/15">
+                <Icon className="h-4 w-4 text-primary" strokeWidth={3} />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-bold leading-tight">{title}</p>
+                <p className="mt-0.5 text-xs leading-snug text-muted-foreground">{sub}</p>
+              </div>
             </div>
           ))}
         </section>
