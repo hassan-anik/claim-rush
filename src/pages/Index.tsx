@@ -28,18 +28,21 @@ const Index = () => {
     <main className="min-h-screen bg-background bg-radial-glow text-foreground">
       <div className="mx-auto flex min-h-screen max-w-md flex-col px-5 pb-10 pt-6">
         {/* Top status bar */}
-        <header className="mb-8 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 backdrop-blur">
+        <header className="mb-8 flex items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2 font-bold tracking-tight">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg cta-gradient text-primary-foreground">
+              <ShieldCheck className="h-4 w-4" strokeWidth={3} />
+            </div>
+            <span className="text-sm text-foreground">
+              Offer<span className="text-primary">Eligibility</span>Check
+            </span>
+          </div>
+          <div className="flex items-center gap-2 rounded-full border border-border bg-card/60 px-2.5 py-1 backdrop-blur">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            <span className="font-medium text-muted-foreground">
-              <span className="text-foreground">US</span> Eligibility Live
-            </span>
-          </div>
-          <div className="font-mono text-muted-foreground">
-            🇺🇸 United States
+            <span className="font-medium text-muted-foreground">🇺🇸 US Live</span>
           </div>
         </header>
 
